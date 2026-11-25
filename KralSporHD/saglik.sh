@@ -4,7 +4,8 @@ source "$(dirname "$0")/../saglik/ortak.sh"
 
 SITE=$(alan_bul "event.html?id=" https://kralsportshd8.xyz/ https://kralsportshd9.xyz/ https://kralsportshd7.xyz/) || { hata "Güncel alan adı bulunamadı"; bitir; }
 tamam "Alan adı: $SITE"
-betik=$(istek -L -A "$UA_TARAYICI" "$SITE/" | grep -oE '<script[^>]+src="[^"]+/script[0-9]*\.js"' | grep -oE 'https?://[^"]+' | head -1)
+betik=$(istek -L -A "$UA_TARAYICI" "$SITE/" | grep -oE "<script[^>]+src=\"[^\"]*script[0-9]*\.js\"" | sed -E "s/.*src=\"//; s/\"$//" | head -1)
+[[ "$betik" != http* ]] && betik="$SITE/${betik#/}"
 js=$(istek -A "$UA_TARAYICI" -e "$SITE/" "$betik")
 sayfa_iceriyor "$js" 'const channels' "Kanal listesi betiği"
 sunucu=$(istek -A "$UA_TARAYICI" -e "$SITE/" "$SITE/event.html?id=androstreamlivebs2" | grep -oE 'https://[^"'"'"' ]+/checklist/' | head -1)
