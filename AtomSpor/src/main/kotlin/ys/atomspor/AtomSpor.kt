@@ -1,7 +1,6 @@
 package ys.atomspor
 
 import com.lagradost.cloudstream3.app
-import org.jsoup.Jsoup
 import ys.ortak.*
 
 // Sayfa listeleri ve yayın adresleri "teletvNN.top" arka ucundan geliyor:
@@ -22,29 +21,12 @@ class AtomSpor : CanliSite() {
             ?.let { Regex("""teletv\d+\.[a-z]+""").find(it)?.value }?.let { teletv = it }
     }
 
-    private suspend fun sayfa(yol: String) =
-        Jsoup.parse(app.get("https://$teletv/load/$yol", headers = Spor.H, referer = "$mainUrl/").text)
-
     override suspend fun kanallar(): List<Kanal> {
         hazirla()
-        val liste = mutableListOf<Kanal>()
-        for (yol in listOf("channels.php", "matches.php")) {
-            runCatching { sayfa(yol) }.getOrNull()?.select("a.single-match[href*=id=]")?.forEach { a ->
-                val id = a.attr("href").substringAfter("id=")
-                val tur = a.attr("data-matchtype")
-                if (tur == "tv") {
-                    liste += Kanal(a.selectFirst(".event")?.text()?.removePrefix("7/24")?.trim()?.ifBlank { null } ?: a.text(), id)
-                } else {
-                    val ev = a.selectFirst(".home")?.text().orEmpty()
-                    val dep = a.selectFirst(".away")?.text().orEmpty()
-                    val olay = a.selectFirst(".event")?.text().orEmpty()
-                    val saat = olay.substringBefore("|").trim()
-                    val ad = if (ev.isNotBlank()) "$saat $ev - $dep" else olay
-                    liste += Kanal(ad.trim(), id, a.selectFirst("img")?.attr("src"), tur.ifBlank { "Maçlar" }, olay.substringAfter("|").trim())
-                }
-            }
+        return listOf("channels.php", "matches.php").flatMap { yol ->
+            runCatching { app.get("https://$teletv/load/$yol", headers = Spor.H, referer = "$mainUrl/").text }
+                .getOrNull()?.let { TekMac.ayristir(it) }.orEmpty()
         }
-        return liste
     }
 
     override suspend fun akislar(kanal: Kanal): List<Akis> {
