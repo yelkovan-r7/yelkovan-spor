@@ -20,7 +20,14 @@ object Spor {
      * Hiçbiri tutmazsa sonu sayılı adreslerde (ör. atomsportv520.top) sayı ileri doğru taranır.
      * Bulunan adres 30 dakika hatırlanır.
      */
-    suspend fun alanBul(anahtar: String, adaylar: List<String>, isaret: String, ileri: Int = 8): String? {
+    suspend fun alanBul(
+        anahtar: String,
+        adaylar: List<String>,
+        isaret: String,
+        ileri: Int = 8,
+        gecitler: List<String> = emptyList(),
+        gecitKalibi: Regex? = null,
+    ): String? {
         alanlar[anahtar]?.let { (t, a) -> if (System.currentTimeMillis() - t < 30 * 60 * 1000) return a }
         suspend fun dene(u: String): String? = runCatching {
             val r = app.get(u, headers = H, timeout = 12L)
@@ -29,6 +36,15 @@ object Spor {
 
         var bulunan: String? = null
         for (a in adaylar) { bulunan = dene(a); if (bulunan != null) break }
+        // Giriş (geçit) sayfaları güncel adrese bağlantı verir.
+        if (bulunan == null && gecitKalibi != null) {
+            loop@ for (g in gecitler) {
+                val metin = runCatching { app.get(g, headers = H, timeout = 12L).text }.getOrNull() ?: continue
+                for (m in gecitKalibi.findAll(metin).map { it.value }.distinct()) {
+                    bulunan = dene(m); if (bulunan != null) break@loop
+                }
+            }
+        }
         if (bulunan == null) {
             val kalip = Regex("""^(https?://[^/]*?)(\d+)(\.[a-z]+)(/.*)?$""")
             loop@ for (a in adaylar) {
