@@ -1,0 +1,8 @@
+{
+  "name": "!YelkovanSpor",
+  "description": "Canlı spor kanalları ve maç yayınları.",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/BUILDS_REPO/builds/plugins.json"
+  ]
+}

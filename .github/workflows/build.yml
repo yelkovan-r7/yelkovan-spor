@@ -1,0 +1,78 @@
+name: Derle
+
+# Ana dala her push'ta tüm eklentileri derler ve "builds" dalına .cs3 + plugins.json olarak koyar.
+concurrency:
+  group: "build"
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths-ignore:
+      - '*.md'
+      - 'saglik/**'
+      - '**/saglik.sh'
+  workflow_dispatch:
+
+# Kaynak repo private ise: Settings → Secrets and variables → Actions içinde
+#   Variables: BUILDS_REPO = KULLANICI/yelkovan-r7-builds   (public, "builds" dalı olan repo)
+#   Secrets:   BUILDS_TOKEN = o repoya yazma izni olan fine-grained token
+# Bunlar tanımlı değilse derlemeler bu reponun "builds" dalına gider.
+env:
+  BUILDS_REPO: ${{ vars.BUILDS_REPO || github.repository }}
+  # Not: plugins.json linkleri build.gradle.kts içinde de bu değişkenden üretilir (orada da kırpılır).
+
+# Derlemeler bu reponun "builds" dalına gönderildiği için yazma izni gerekiyor.
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kaynağı al
+        uses: actions/checkout@v5
+        with:
+          path: "src"
+
+      - name: builds dalını al
+        uses: actions/checkout@v5
+        with:
+          ref: "builds"
+          path: "builds"
+          repository: ${{ env.BUILDS_REPO }}
+          token: ${{ secrets.BUILDS_TOKEN || github.token }}
+
+      - name: Eski derlemeleri temizle
+        run: rm -f $GITHUB_WORKSPACE/builds/*.cs3
+
+      - name: JDK 17
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 17
+
+      # GitHub'ın Ubuntu sunucularında Android SDK hazır kurulu geliyor; ayrı kurulum adımı gerekmiyor.
+      - name: Eklentileri derle
+        env:
+          ANDROID_HOME: /usr/local/lib/android/sdk
+        run: |
+          cd $GITHUB_WORKSPACE/src
+          chmod +x gradlew
+          ./gradlew make makePluginsJson
+          cp **/build/*.cs3 $GITHUB_WORKSPACE/builds
+          cp build/plugins.json $GITHUB_WORKSPACE/builds
+          # Değişkene yapıştırırken araya girebilecek boşluk/satır sonlarını temizle
+          REPO=$(printf '%s' "$BUILDS_REPO" | tr -d '[:space:]')
+          sed "s#BUILDS_REPO#$REPO#" repo.json > $GITHUB_WORKSPACE/builds/repo.json
+
+      - name: builds dalına gönder
+        run: |
+          cd $GITHUB_WORKSPACE/builds
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add .
+          git commit --amend -m "Build $GITHUB_SHA" || exit 0
+          git push --force

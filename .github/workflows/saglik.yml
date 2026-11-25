@@ -1,0 +1,51 @@
+name: Sağlık kontrolü
+
+# Her gün tüm eklentilerin sitelerini kontrol eder. Bir site bozulursa (adres değişimi,
+# API/HTML yapısı değişimi, video linki açılmaması) "site-bozuldu" etiketli bir issue açar.
+# GitHub, issue açılınca ve iş başarısız olunca repo sahibine e-posta gönderir.
+on:
+  schedule:
+    - cron: "0 6 * * *"   # Her gün 06:00 UTC (09:00 TR)
+  workflow_dispatch:       # Actions sekmesinden elle de çalıştırılabilir
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  kontrol:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Kontrolleri çalıştır
+        id: kontrol
+        run: bash saglik/hepsini-kontrol-et.sh
+        continue-on-error: true
+
+      - name: Bozuksa issue aç veya güncelle
+        if: steps.kontrol.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          baslik="Bozulan eklenti var ($(date -u +%Y-%m-%d))"
+          govde="$(cat saglik/rapor.md)
+
+          Çalıştırma: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          gh label create site-bozuldu --color d73a4a --force >/dev/null
+          acik=$(gh issue list --label site-bozuldu --state open --json number --jq '.[0].number')
+          if [ -n "$acik" ]; then
+            gh issue comment "$acik" --body "$govde"
+          else
+            gh issue create --title "$baslik" --label site-bozuldu --body "$govde"
+          fi
+          exit 1   # İşi kırmızı göster ki GitHub "workflow başarısız" e-postası da göndersin
+
+      - name: Hepsi sağlıklıysa açık issue'yu kapat
+        if: steps.kontrol.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for n in $(gh issue list --label site-bozuldu --state open --json number --jq '.[].number'); do
+            gh issue close "$n" --comment "Tüm kontroller tekrar geçti ✅"
+          done
