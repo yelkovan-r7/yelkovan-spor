@@ -1,0 +1,382 @@
+[
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=ardaspor41.top",
+        "fileHash": "sha256-76a94d3077a7a46950641b0500fed7607ff24488a3b691c40189bc543ae5fe40",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 46647,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "ArdaSpor",
+        "description": "ArdaSpor - spor kanallar\u0131 ve canl\u0131 ma\u00e7lar.",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/ArdaSpor.cs3",
+        "name": "ArdaSpor"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=atomsportv520.top",
+        "fileHash": "sha256-4c3fb46ecefe3ec96a422886e854216f6cf9709be212ef879c4f35b1a8e9317c",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 46195,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "AtomSpor",
+        "description": "AtomSpor - beIN, S Sport, TRT Spor ve canl\u0131 ma\u00e7lar.",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/AtomSpor.cs3",
+        "name": "AtomSpor"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=betmatiktv156.com",
+        "fileHash": "sha256-77b35b261a3738980da768cca4eebcaeec6ce1d971c780e00b6916fe056dd97e",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 43640,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "BetmatikTV",
+        "description": "Betmatik TV - spor kanallar\u0131 ve g\u00fcn\u00fcn ma\u00e7lar\u0131. (Yay\u0131n sunucusu Cloudflare korumal\u0131; test edilemedi.)",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/BetmatikTV.cs3",
+        "name": "BetmatikTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=inattvizle500.top",
+        "fileHash": "sha256-c491d8c7d259131ccb6e5caa327a4e1ffefe10880499c77d2b7bf94bea58a142",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 43764,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "InatTV",
+        "description": "InatTV - beIN, S Sport, Tivibu, Tabii, TRT ve g\u00fcn\u00fcn ma\u00e7lar\u0131.",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/InatTV.cs3",
+        "name": "InatTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=intersportv1.live",
+        "fileHash": "sha256-0694dba32c636ebd29e943fcad3c0d0a88820954b32127e6ef06488687f98dfe",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 44945,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "InterSporTV",
+        "description": "InterSporTV - g\u00fcn\u00fcn ma\u00e7lar\u0131 (futbol, basketbol, tenis, e-spor).",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/InterSporTV.cs3",
+        "name": "InterSporTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=jestyayin971.com",
+        "fileHash": "sha256-9119f8c8e7a6c98868ee2b9fcfb448537af11775664d0bf1f153e33de4d3497f",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 43776,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "JestYayin",
+        "description": "JestYay\u0131n - spor kanallar\u0131 ve g\u00fcn\u00fcn ma\u00e7lar\u0131. (Site o s\u0131rada a\u00e7\u0131lmad\u0131; test edilemedi.)",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/JestYayin.cs3",
+        "name": "JestYayin"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=kacakspor5.com",
+        "fileHash": "sha256-5f145b92cf6fd65255c8f4ebcefee0ed1f8a3f2f5688ba4618c9c5d7019399a2",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 43689,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "KacakSpor",
+        "description": "Ka\u00e7akSpor - 50+ spor kanal\u0131 (beIN, Exxen, Tabii, Tivibu, S Sport).",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/KacakSpor.cs3",
+        "name": "KacakSpor"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=kralsportshd8.xyz",
+        "fileHash": "sha256-22eee6db09cf41c00f724ebb6b18092fd97e11dea6426cf7984ad057d5dbad1b",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 43796,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "KralSporHD",
+        "description": "KralSportsHD - beIN, S Sport, Tivibu, TRT Spor ve g\u00fcn\u00fcn ma\u00e7lar\u0131.",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/KralSporHD.cs3",
+        "name": "KralSporHD"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=leograndtv11.com",
+        "fileHash": "sha256-fe7cec0514069ac899c558524b477e082d9022d4ca340dff8ce36758129ba856",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 49413,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "LeoTV",
+        "description": "LeoTV - spor kanallar\u0131 ve ma\u00e7lar.",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/LeoTV.cs3",
+        "name": "LeoTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=mackeyfi605.sbs",
+        "fileHash": "sha256-615df1384bab639991136cdf3c20f01131ed3279c36db4536f0bc3b2d8f7f346",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 46688,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "MacKeyfi",
+        "description": "Ma\u00e7Keyfi - beIN, S Sport, Tivibu, Tabii ve ulusal spor kanallar\u0131.",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/MacKeyfi.cs3",
+        "name": "MacKeyfi"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=mahsunsports.xyz",
+        "fileHash": "sha256-b52a3c4e26a3fe41360fcd4877edcf4b0a798e1031550f1f74b9f6ea233382ad",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 43754,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "MahsunSports",
+        "description": "MahsunSports - beIN, S Sport, Tivibu, TRT Spor ve g\u00fcn\u00fcn ma\u00e7lar\u0131.",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/MahsunSports.cs3",
+        "name": "MahsunSports"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=sports.nebulapro.xyz",
+        "fileHash": "sha256-017682a7ea1d069c12861faec94ef1e1acb896fb7a13ee13accc54fcc400f8ae",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 53268,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "NebulaSports",
+        "description": "NebulaSports - d\u00fcnya genelinde canl\u0131 ma\u00e7lar (futbol, basketbol, tenis, motor sporlar\u0131, d\u00f6v\u00fc\u015f, kriket\u2026). \u00c7o\u011fu yabanc\u0131 yay\u0131n.",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/NebulaSports.cs3",
+        "name": "NebulaSports"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=github.com",
+        "fileHash": "sha256-bf43a49351ba7b9aa72966b80de246cbde92702b690f9aee619b3a17a809b6c6",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 50733,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "NetVGold",
+        "description": "NetVGold - haz\u0131r g\u00fcncellenen kanal listeleri (beIN, S Sport, Tivibu, Tabii, Exxen, ulusal); her kanalda birden \u00e7ok kaynak.",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/NetVGold.cs3",
+        "name": "NetVGold"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=papazsports1036.pro",
+        "fileHash": "sha256-6c9421c4e520b6b4a9263e5454c658698d898816cca4ff32f111490a9185ebc3",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 43769,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "PapazSports",
+        "description": "PapazSports - spor kanallar\u0131 ve g\u00fcn\u00fcn ma\u00e7lar\u0131. (Yay\u0131n sunucusu T\u00fcrkiye'den engelli olabilir; WARP gerekebilir.)",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/PapazSports.cs3",
+        "name": "PapazSports"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=patronhd10.cfd",
+        "fileHash": "sha256-955db62fcf41d0945bfd4abddb9f5097c3c3bc40a0f719cc123d4e279f1c1051",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 50423,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "PatronHD",
+        "description": "PatronHD - spor kanallar\u0131 ve g\u00fcn\u00fcn ma\u00e7lar\u0131 (TRT ma\u00e7lar\u0131 do\u011frudan TRT sunucusundan).",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/PatronHD.cs3",
+        "name": "PatronHD"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=taraftarium24.io",
+        "fileHash": "sha256-1311029a860c244121d459ae80f89265401e3ba4cab6e1d96ce2809210cdbe0f",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 45684,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "Taraftarium24",
+        "description": "Taraftarium24 - beIN, S Sport, Tivibu, Tabii ve ulusal spor kanallar\u0131.",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/Taraftarium24.cs3",
+        "name": "Taraftarium24"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=trgoals183.top",
+        "fileHash": "sha256-dfcab533f8c49236ebca5f5f8743cfddcbaf2c3e83ec8579a0f8015845804520",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 43627,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "TRGoals",
+        "description": "TRGoals - beIN, S Sport, Tivibu, TRT kanallar\u0131 ve g\u00fcn\u00fcn ma\u00e7lar\u0131. (Yay\u0131n sunucusu T\u00fcrkiye'den engelli olabilir; WARP gerekebilir.)",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/TRGoals.cs3",
+        "name": "TRGoals"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=vegoltv983.com",
+        "fileHash": "sha256-97685eb2facbce12ef0f1942eb247a5f4adec94c4e78a63b3b6817c3d66306b1",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 43614,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "VegolTV",
+        "description": "VegolTV - spor kanallar\u0131 ve g\u00fcn\u00fcn ma\u00e7lar\u0131. (Yay\u0131n sunucusu Cloudflare korumal\u0131; test edilemedi.)",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/VegolTV.cs3",
+        "name": "VegolTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=101baywintv.live",
+        "fileHash": "sha256-fe089a3cea3787895498075d15eb4bd8df357b2ecdc09eb079bbd05d9442df13",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/yelkovan-r7/yelkovan-spor",
+        "fileSize": 43630,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "yelkovan-r7"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "ZbahisTV",
+        "description": "Zbahis / Baywin TV - spor kanallar\u0131 ve g\u00fcn\u00fcn ma\u00e7lar\u0131. (Yay\u0131n sunucusu Cloudflare korumal\u0131; test edilemedi.)",
+        "url": "https://raw.githubusercontent.com/yelkovan-r7/yelkovan-spor/builds/ZbahisTV.cs3",
+        "name": "ZbahisTV"
+    }
+]
