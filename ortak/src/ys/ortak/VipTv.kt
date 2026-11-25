@@ -37,7 +37,7 @@ abstract class VipTv : CanliSite() {
         doc.select(".channel-item[data-source], #tv-listesi li[data-source]").forEach { e ->
             val ad = e.attr("data-name").ifBlank { return@forEach }
             val k = listOf(Kaynak(ad, e.attr("data-target"), e.attr("data-source")))
-            liste += Kanal(ad, toJson(k), e.selectFirst("img")?.attr("abs:src"), "Kanallar")
+            liste += Kanal(ad, k.toJson(), e.selectFirst("img")?.attr("abs:src"), "Kanallar")
         }
         doc.select("li[data-category][data-source]").forEach { e ->
             val kaynaklar = tryParseJson<List<Kaynak>>(e.attr("data-source"))?.takeIf { it.isNotEmpty() } ?: return@forEach
@@ -46,7 +46,7 @@ abstract class VipTv : CanliSite() {
             val saat = e.selectFirst(".saat")?.text()?.trim().orEmpty()
             val ad = "$saat $ev - $dep".trim()
             val spor = e.attr("data-category").replaceFirstChar { it.uppercase() }
-            liste += Kanal(ad, toJson(kaynaklar), e.selectFirst("img")?.attr("abs:src"), spor)
+            liste += Kanal(ad, kaynaklar.toJson(), e.selectFirst("img")?.attr("abs:src"), spor)
         }
         return liste
     }
